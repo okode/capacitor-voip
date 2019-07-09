@@ -34,12 +34,12 @@ public class Voip: CAPPlugin, PKPushRegistryDelegate {
         let token = pushCredentials.token.map { String(format: "%.2hhx", $0) }.joined()
         self.notifyListeners("registration", data: [
             "token": token
-        ])
+        ], retainUntilConsumed: true)
     }
     
     public func pushRegistry(_ registry: PKPushRegistry, didInvalidatePushTokenFor type: PKPushType) {
         print("Voip Plugin - Error registering device");
-        self.notifyListeners("registrationError", data: [:])
+        self.notifyListeners("registrationError", data: [:], retainUntilConsumed: true)
     }
     
     public func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
