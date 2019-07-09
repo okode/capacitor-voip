@@ -45,7 +45,7 @@ public class Voip: CAPPlugin, PKPushRegistryDelegate {
     public func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
         self.notifyListeners("pushNotificationReceived", data: [
             "data": payload.dictionaryPayload
-        ])
+        ], retainUntilConsumed: true)
     }
     
 }
