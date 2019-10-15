@@ -1,7 +1,7 @@
 
   Pod::Spec.new do |s|
     s.name = 'CapacitorVoip'
-    s.version = '0.0.1'
+    s.version = '0.0.2'
     s.summary = 'Plugin to receive iOS voip notifications'
     s.license = 'MIT'
     s.homepage = 'https://github.com/okode/capacitor-voip'
