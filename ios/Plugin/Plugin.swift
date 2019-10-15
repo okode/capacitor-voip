@@ -46,6 +46,9 @@ public class Voip: CAPPlugin, PKPushRegistryDelegate {
         self.notifyListeners("pushNotificationReceived", data: [
             "data": payload.dictionaryPayload
         ], retainUntilConsumed: true)
+        DispatchQueue.main.async {
+          completion()
+        }
     }
     
 }
