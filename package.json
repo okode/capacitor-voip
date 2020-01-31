@@ -1,6 +1,6 @@
 {
   "name": "capacitor-voip",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Plugin to receive iOS voip notifications",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
