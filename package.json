@@ -1,12 +1,12 @@
 {
   "name": "capacitor-voip",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Plugin to receive iOS voip notifications",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
+    "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
@@ -16,6 +16,7 @@
     "@capacitor/core": "latest"
   },
   "devDependencies": {
+    "rimraf": "^3.0.0",
     "typescript": "^3.2.4",
     "@capacitor/ios": "latest"
   },
